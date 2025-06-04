@@ -19,8 +19,12 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/cliente/index', [ClienteController::class, 'index'])->name('cliente.index');
-
-
+Route::get('/cliente/create', [ClienteController::class, 'create'])->name('cliente.create');
+Route::post('/cliente/store', [ClienteController::class, 'store'])->name('cliente.store');
+Route::get('/cliente/exportar/pdf', [ClienteController::class, 'exportarPdf'])->name('cliente.exportarPdf');
+Route::get('/cliente/edit/{id}', [ClienteController::class, 'edit'])->name('cliente.edit');
+Route::put('/cliente/update/{id}', [ClienteController::class, 'update'])->name('cliente.update');
+Route::delete('/cliente/destroy/{id}', [ClienteController::class, 'destroy'])->name('cliente.destroy');
 
 
 Route::middleware('auth')->group(function () {

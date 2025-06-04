@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nombres');
             $table->string('pri_ape');
             $table->string('seg_ape');
-            $table->string('sexo', 6)->nullable();
+            $table->string('genero', 9)->nullable();
             $table->string('docu_tip', 9)->nullable();
             $table->string('docu_num')->unique();
             $table->string('telefono')->nullable();

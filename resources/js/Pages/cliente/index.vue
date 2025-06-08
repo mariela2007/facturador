@@ -22,21 +22,23 @@ const eliminarCliente = (id) => {
 
         <div
         class="py-12 min-h-screen bg-cover bg-center bg-no-repeat" 
-    style="background-image: url('/images/fondo.jpg');" >
+    style="background-image: url('/images/imagen.jpg');" >
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <!-- Header y botones -->
                 <div class="flex justify-between items-center mb-6">
-                    <h1 class="text-3xl font-bold text-gray-800">Lista de Clientes</h1>
+                    <h1 class="text-3xl font-bold text-white drop-shadow-[0_4px_3px_rgba(0,0,0,0.7)] drop-shadow-[0_2px_2px_rgba(0,0,0,0.6)]">Lista de Clientes</h1>
                     <div class="flex gap-4">
                         <Link
                             :href="route('cliente.create')"
-                            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded shadow"
-                        >
+                class="bg-black border-4 border-purple-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 hover:border-purple-800 transition duration-300 ease-in-out"
+             >
                             + Nuevo Cliente
                         </Link>
                         <button
                             @click="descargarPdf"
-                            class="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded shadow"
+                           class="bg-black border-4 border-orange-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md
+         hover:bg-orange-700 hover:border-orange-700
+         transition duration-300 ease-in-out"
                         >
                             Descargar PDF
                         </button>
@@ -46,7 +48,7 @@ const eliminarCliente = (id) => {
                 <!-- Tabla de clientes -->
                 <div class="bg-white shadow-md rounded-lg overflow-hidden">
                     <table class="min-w-full table-auto text-sm text-left">
-                        <thead class="bg-blue-800 text-white">
+                        <thead class="bg-black text-white">
                             <tr>
                                 <th class="py-3 px-4">Nombres</th>
                                 <th class="py-3 px-4">Primer Apellido</th>

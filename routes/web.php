@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\Cliente\ClienteController;
+use App\Http\Controllers\Proyecto\ProyectoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,12 @@ Route::get('/cliente/exportar/pdf', [ClienteController::class, 'exportarPdf'])->
 Route::get('/cliente/edit/{id}', [ClienteController::class, 'edit'])->name('cliente.edit');
 Route::put('/cliente/update/{id}', [ClienteController::class, 'update'])->name('cliente.update');
 Route::delete('/cliente/destroy/{id}', [ClienteController::class, 'destroy'])->name('cliente.destroy');
+
+Route::resource('proyectos', ProyectoController::class);
+Route::get('proyectos-pdf', [ProyectoController::class, 'exportarPdf'])->name('proyectos.exportarPdf');
+Route::get('/proyectos', [ProyectoController::class, 'index'])->name('proyectos.index');
+
+
 
 
 Route::middleware('auth')->group(function () {

@@ -10,9 +10,11 @@ use Barryvdh\DomPDF\Facade\Pdf;
 
 class ClienteController extends Controller
 {
+
     public function index() {
 
         $clientes = Cliente::get();
+
 
         return Inertia::render('Cliente/Index', [
             'clientes' => $clientes

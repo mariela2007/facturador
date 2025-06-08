@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nombres');
             $table->string('pri_ape');
             $table->string('seg_ape');
-            $table->string('genero', 9)->nullable();
+            $table->string('genero', 15)->nullable();
             $table->string('docu_tip', 9)->nullable();
             $table->string('docu_num')->unique();
             $table->string('telefono')->nullable();
@@ -32,4 +32,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('clientes');
     }
-};
+}; 

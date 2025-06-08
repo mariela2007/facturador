@@ -190,9 +190,12 @@ const showingNavigationDropdown = ref(false);
             </header>
 
             <!-- Page Content -->
-            <main>
-                <slot />
-            </main>
+            <main
+  class="min-h-screen bg-cover bg-center bg-no-repeat"
+  style="background-image: url('/images/imagen.jpg');"
+>
+  <slot />
+</main>
         </div>
     </div>
 </template>
